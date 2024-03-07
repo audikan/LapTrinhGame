@@ -46,8 +46,10 @@ CMario *mario;
 
 
 CBrick *brick;
-#define BRICK_X 10.0f
+#define BRICK_X 15.0f
 #define BRICK_Y 120.0f
+#define BRICK_START_VX 0.2f
+#define BRICK_START_VY 0.1f
 
 LPTEXTURE texMario = NULL;
 LPTEXTURE texBrick = NULL;
@@ -82,7 +84,7 @@ void LoadResources()
 	//texMisc = game->LoadTexture(MISC_TEXTURE_PATH);
 
 	mario = new CMario(MARIO_START_X, MARIO_START_Y, MARIO_START_VX, MARIO_START_VY, texMario);
-	brick = new CBrick(BRICK_X, BRICK_Y, texBrick);
+	brick = new CBrick(BRICK_X, BRICK_Y, BRICK_START_VX, BRICK_START_VY, texBrick);
 
 	
 	// objects.push_back(mario);
